@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'https://crud-api-sc.herokuapp.com/api/todos'
+  apiURL: 'http://crud-api-sc.herokuapp.com/api/todos'
 };

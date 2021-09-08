@@ -32,7 +32,7 @@ export class TodoService {
 
   marcarComoConcluido(id: number) : Observable<Todo>{
     const url = `${this.apiURL}/${id}/done`
-    return this.http.patch<Todo>(url, {})
+    return this.http.patch<Todo>(url, {done: true})
   }
 
 

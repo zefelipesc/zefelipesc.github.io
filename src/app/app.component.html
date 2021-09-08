@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand"> Todo App</a>
+  <a class="navbar-brand"> Crud App</a>
 </nav>
 <div class="container mt-4">
-  <h3>Todos</h3>
+  <h3>Inserir Atividade</h3>
   <hr />
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="row">
@@ -22,14 +22,9 @@
         " class="list-group-item d-flex justify-content-between align-items-center">
           <span class="{{ todo.done ? 'done' : '' }}">
             {{ todo.description }} {{ todo.doneDate }}
-
           </span>
           <div class="btn-group">
-            <button class="btn btn-success"
-              [disabled]="todo.done"
-              (click)="done(todo)">
-              Done
-            </button>
+            <button class="btn btn-success"[disabled]="todo.done" (click)="done(todo)">Done</button>
             <button class="btn btn-danger" (click)="delete(todo)">Delete</button>
           </div>
         </li>
